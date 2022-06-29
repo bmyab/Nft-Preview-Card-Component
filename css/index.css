@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-main-BG-a: rgb(17, 27, 48);
+  --Very-dark-blue--BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  background-color: var(--Very-dark-blue-main-BG-a);
+}
+.card{
+  max-width: 36rem;
+  padding: 2.5rem;
+  background-color:var(--Very-dark-blue--BG) ;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.8rem;
+}
+.card .card__logo img{
+  width: 100%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.card .card__logo:hover::before{
+  content: '';
+  width: 310px;
+  height: 310px;
+  position: absolute;
+  --Cyan: rgba(0, 255, 247,0.5);
+  background-color: var(--Cyan);
+  background-image: url('../assets/images/icon-view.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-y: 50%;
+  background-position-x: 50%;
+  border-radius: 0.8rem;  
+  cursor: pointer;
+}
+/* .card .card__logo img:hover{
+  opacity: 0.5;
+  cursor: pointer;
+} */
+.card__content .title{
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.card__content .title:hover{
+  color: var(--Cyan);
+  cursor: pointer;
+}
+.card__content .paragraph{
+  color: var(--Soft-blue);
+  font-weight: 400;
+  margin-block: 1.5rem;
+}
+.card__content .items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Cyan);
+  margin-bottom: 2rem;
+}
+.card__content .items span{
+  margin-left: 0.5rem;
+}
+.card__content .items .c-p{
+  color: var(--Soft-blue);
+}
+.card__content .footer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: 1px solid var(--Very-dark-blue-line);
+  padding-top: 1.5rem;
+}
+.card__content .footer img{
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
+  border:1px solid white;
+}
+.card__content .footer p{
+  display: inline-block;
+  text-align: center;
+  color: var(--Soft-blue);
+}
+.card__content .footer p span{
+  color: white;
+  font-weight: 400;
+}
+.card__content .footer p span:hover{
+  color: var(--Cyan);
+  cursor: pointer;
+}
