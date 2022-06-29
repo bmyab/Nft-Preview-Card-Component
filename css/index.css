@@ -73,7 +73,7 @@ body{
 }
 .card__content .paragraph{
   color: var(--Soft-blue);
-  font-weight: 400;
+  font-weight: 300;
   margin-block: 1.5rem;
 }
 .card__content .items{
